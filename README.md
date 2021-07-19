@@ -32,12 +32,9 @@ To run the Chia GUI with testnet in 3 steps:
 Note: We'll use testnet7, because the configuration values are already available in the default install, and there's
 a "faucet" website we can use to get some free testnet chia easily.
 
-1) edit ~/.chia/mainnet/config and change the selected_network line to "selected_network: testnet7" 
+1) edit ~/.chia/mainnet/config and change the selected_network line to "selected_network: testnet7"
 
 2) at the command line, type: "chia configure -t true"
-
-#chia #chiablockchain #LearnChia #ChiaFAQ 
-
 
 3) start the chia-blockchain-gui within its directory: "npm run electron &"
 
@@ -45,7 +42,7 @@ If you have problems, check the logs in ~/.chia/mainnet/log/debug.log
 
 Sync-ing up the testnet may take a huge amount of time, like many hours, for the first block of the testnet. Have patience.
 
-If you want to make sure something is really going on, you can change the debug logging level and restart.
+If you want to make sure something is really going on, you can change the debug logging level in ~/.chia/mainnet/config/config.yaml from WARNING to INFO and restart.
 
 first draft of these instructions, may contain orc turds
 
@@ -57,24 +54,24 @@ Note: To run the Chia GUI for both mainnet and testnet at the same time, you may
 
 ## Using the Chia Simulator
 
-To experiment with #chiablockchain, you can run the simulator on your local Linux or MacOS machine. 
+To experiment with #chiablockchain, you can run the simulator on your local Linux or MacOS machine.
 
-Assuming you've already installed chia, you need to install timelord and then run the simulator. 
+Assuming you've already installed chia, you need to install timelord and then run the simulator.
 
-Follow these steps: 
+Follow these steps:
 
 To install the timelord, go to the main chia directory, then activate venv, set the install file to executable, and run the install file with these commands:
 
-. ./activate
-chmod +x ./install-timelord.sh
-sh http://install-timelord.sh
+. ./activate  
+chmod +x ./install-timelord.sh  
+sh http://install-timelord.sh  
 
 If the install script runs without errors, you can now start the simulator. Note that the command in the documentation is wrong, should be:
 
-chia start simulator
-(simulator, not sim)
+chia start simulator  
+(NOTE: simulator, not sim)
 
-Oh, and 1 more thing, when you upgrade your chia version, run the install_timelord.sh script again! Hope this helps.
+Oh, and one more thing, when you upgrade your chia version, run the install_timelord.sh script again! Hope this helps.
 
 
 Reference:
@@ -97,5 +94,5 @@ https://docs.google.com/document/d/1x2PHn1qnMESc9RhPiBflDHWKoch2K0ds50brfSc7LPc/
 
 # Author Orcs
 
-RightSexyOrc, https://twitter.com/RightSexyOrc
+RightSexyOrc, https://twitter.com/RightSexyOrc  
 (you?)
