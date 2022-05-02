@@ -29,24 +29,22 @@ There are 3 ways to experiment with Chia besides on its mainnet:
 
 To run the Chia GUI with testnet in 3 steps:
 
-Note: We'll use testnet7, because the configuration values are already available in the default install, and there's
+Note: We'll use testnet10, because the configuration values are already available in the default install, and there's
 a "faucet" website we can use to get some free testnet chia easily.
 
-1) edit ~/.chia/mainnet/config and change the selected_network line to "selected_network: testnet7"
+1) at the command line, type: "chia configure -t true"
 
-2) at the command line, type: "chia configure -t true"
-
-3) start the chia-blockchain-gui within its directory: "npm run electron &"
+2) start the chia-blockchain-gui within its directory: "npm run electron &"
 
 If you have problems, check the logs in ~/.chia/mainnet/log/debug.log
 
-Sync-ing up the testnet may take a huge amount of time, like many hours, for the first block of the testnet. Have patience.
+Sync-ing up the testnet may take a huge amount of time, like many hours, for the first block of the testnet. Have patience. (can be bootstrapped with: https://download.chia.net/?prefix=testnet10)
 
 If you want to make sure something is really going on, you can change the debug logging level in ~/.chia/mainnet/config/config.yaml from WARNING to INFO and restart.
 
 first draft of these instructions, may contain orc turds
 
-4) Now you can get yourself some TestChia, head to http://chia-faucet.com/
+3) Now you can get yourself some TestChia, head to https://testnet10-faucet.chia.net/
 
 
 Note: To run the Chia GUI for both mainnet and testnet at the same time, you may wish to run them in separate docker containers, so they don't see the other instance and quit.
